@@ -92,7 +92,7 @@ def palin():
 
 #palin()
 
-#5 Sorteren
+#5 Sorteren WERKT
 
 def sorteren1(): #Dit is opzich een sorteer functie, maar dit is wel heel makkelijk.. ik probeer er nog 1)
     lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
@@ -102,3 +102,78 @@ def sorteren1(): #Dit is opzich een sorteer functie, maar dit is wel heel makkel
 #sorteren1()
 
 def sorteren():
+    lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
+    leeg = []
+
+    while lijst:
+        kleinste = lijst[0] #Het kleinste getal staat altijd vooraan (Omdat het in een loop staat word dit steeds geupdate)
+        for item in lijst:
+            print(item)
+            if item < kleinste: #kijkt of het volgende getal kleiner is dan het eerste getal in de leeg lijst
+                kleinste = item #als dat zo is dan word het volgende getal het kleinste getal, zo niet dan kijkt hij naar het volgende getal, net zo lang tot alle getallen weg zijn (hij zal de lijst dus meerdere keren doorlopen)
+        leeg.append(kleinste) #Het kleinste getal word toegevoegd
+        lijst.remove(kleinste)
+    print(leeg)
+
+#sorteren()
+# 6 Gemiddelde berekenen
+
+def gemiddelde():
+    lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
+    aantal = 0
+    totaal = 0
+    for item in lijst:
+        totaal = totaal + item
+        aantal = aantal + 1
+    gem = totaal/aantal
+    print(gem)
+
+"""AFMAKEN!"""
+#gemiddelde()
+
+def gemiddeldelijst():
+    print(0)
+
+
+#7 Random WERKT
+
+def random():
+    import random
+    getal = random.randrange(10)
+    while True:
+        gok = int(input('Gok een getal: '))
+        if gok == getal:
+            print("Goed geraden!, het was {}".format(getal))
+            break
+        else:
+            print('Gok opnieuw!')
+            continue
+
+#random()
+
+#8 Compressie
+
+
+
+
+#12 FizzBuzz WERKT
+def fizzbuzz():
+    for item in range(1,101):
+        if item%3 == 0 and item%5 ==0:
+            print('fizzbuzz')
+        elif item%3 == 0:
+            print('fizz')
+        elif item%5 == 0:
+            print('buzz')
+        else:
+            print(item)
+
+
+
+fizzbuzz()
+
+
+
+
+
+
