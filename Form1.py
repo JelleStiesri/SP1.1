@@ -116,7 +116,8 @@ def sorteren():
     print(leeg)
 
 #sorteren()
-# 6 Gemiddelde berekenen
+
+# 6 Gemiddelde berekenen WERKT
 
 def gemiddelde():
     lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
@@ -126,14 +127,31 @@ def gemiddelde():
         totaal = totaal + item
         aantal = aantal + 1
     gem = totaal/aantal
-    print(gem)
+    print('Gemiddelde = ',gem)
 
-"""AFMAKEN!"""
+
 #gemiddelde()
 
 def gemiddeldelijst():
-    print(0)
+    hoofdlijst = [[5,8,3],[5,2,6],[1,4,9,3,5],[4,3,7]]
+    gemlijst = []
+    for lijst in hoofdlijst:
+        totaal = 0
+        aantal = 0
+        for getal in lijst:
+            totaal = totaal + getal
+            aantal = aantal + 1
+        gem = totaal/aantal
+        gemlijst.append(gem)
+    totaal = 0
+    aantal = 0
+    for item in gemlijst:
+        totaal = totaal + item
+        aantal = aantal + 1
+    antwoord = round(totaal/aantal,1)
+    print('Gemiddelde = ',antwoord)
 
+#gemiddeldelijst()
 
 #7 Random WERKT
 
@@ -155,6 +173,34 @@ def random():
 
 
 
+#11 Caesarcijfer WERKT
+
+def caesar():
+    tekst = input('Geef een tekst: ')
+    stap = int(input('Geef een rotatie: '))
+    antwoord = ''
+    hoofd = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+                 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+                 'U', 'V', 'W', 'X', 'Y', 'Z']
+    klein = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                 'u', 'v', 'w', 'x', 'y', 'z']
+    """Het alfabet staat er 2 keer, dit is zodat er geen errors komen als de z bijvoorbeel 2 moet opschuiven
+    (Anders zou de lijst dan out of range zijn)"""
+    for letter in tekst:
+        if letter in hoofd:
+            index = hoofd.index(letter)
+            nieuweindex = index + stap
+            antwoord = antwoord + hoofd[nieuweindex]
+        elif letter in klein:
+            index = klein.index(letter)
+            nieuweindex = index + stap
+            antwoord = antwoord + klein[nieuweindex]
+        elif letter == ' ':
+            antwoord = antwoord + ' '
+    print('Caesarcode = {}'.format(antwoord))
+
+#caesar()
 
 #12 FizzBuzz WERKT
 def fizzbuzz():
@@ -170,7 +216,7 @@ def fizzbuzz():
 
 
 
-fizzbuzz()
+#fizzbuzz()
 
 
 
