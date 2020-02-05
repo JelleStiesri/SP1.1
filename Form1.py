@@ -1,16 +1,14 @@
 "Ik heb sommige dingen samen gedaan met Max."
 
-#1 Pyramide
+#1 Pyramide WERKT
 def pyramide():
     hoogte = int(input("Hoe hoog is de Pyramide: "))
     for item in range(hoogte):
         print('*'*(item+1))
-    lengte = hoogte-1
-    for item in range(hoogte):
-        print('*'*(item-1))
+    for item in range(hoogte-1,0,-1):
+        print('*'*(item))
 
-pyramide()
-#?
+#pyramide()
 
 #2 Testcheck WERKT
 def testcheck():
@@ -27,6 +25,8 @@ def testcheck():
             break
     index = index + 1
     print(index)
+
+#testcheck()
 
 #3 Lijstcheck
 
@@ -64,5 +64,41 @@ def eennulcheck():
         return False
 #print(eennulcheck())
 
-#4 Palindroom
+#4 Palindroom WERKT
+#Bibliotheekfunctie
+def biebpalin():
+    woord = input("Geef een woord: ")
+    omgedraaid = ''.join(reversed(woord)) #Ik heb de implementatie van de ingebouwde functie wel op moeten zoeken!
+    if omgedraaid == woord:
+        print("Wel een palindroom")
+        return True
+    else:
+        print('Geen palindroom')
+        return False
+#biebpalin()
 
+#Eigen functie
+def palin():
+    omgedraaid = "" #Hierin komt het omgedraaide woord
+    woord = input("Geef een woord: ")
+    for item in woord:
+        omgedraaid = item + omgedraaid #plaatst alle voorgaande letters achter de nieuwe
+    if omgedraaid == woord:
+        print("Wel een palindroom")
+        return True
+    else:
+        print('Geen palindroom')
+        return False
+
+#palin()
+
+#5 Sorteren
+
+def sorteren1(): #Dit is opzich een sorteer functie, maar dit is wel heel makkelijk.. ik probeer er nog 1)
+    lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
+    lijst.sort()
+    print(lijst)
+
+#sorteren1()
+
+def sorteren():
