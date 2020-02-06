@@ -1,15 +1,26 @@
-def compressie():
-    antwoord = ""
-    bestand = open("compressie.txt" ,"r")
-    data = bestand.read().split('\n') #leest data uit bestand en split het meteen in zitten en lege zinnen
-    for zin in data:
-        strip = zin.lstrip() #De l voor strip staat voor 'leading' dat betekend dat alle whitespace voor de tekst word verwijderd
-        if strip != '': #Negeert de lege regels
-            antwoord = antwoord + strip + '\n'
+def fibonaci(n,ans):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    if len(ans) == n:
+        print('Antwoord = ',max(ans))
+        return(max(ans))
+    else:
+        ans.append(ans[len(ans)-1]+ans[len(ans)-2])
 
 
-    print(antwoord)
-    nieuwbestand = open("compressieantwoord.txt", 'w+') #w+ maakt nieuw bestand aan als deze nog niet bestond
-    nieuwbestand.write(antwoord)
+    fibonaci(n,ans) #Recursief
 
-compressie()
+
+fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
+
+
+"""def fibo(n):
+    if n == 0:
+        return 0
+    elif n ==1:
+        return 1
+    else:
+        return (fibo(n-1)+fibo(n-2))
+print(fibo(4))"""

@@ -183,8 +183,25 @@ def compressie():
     nieuwbestand = open("compressieantwoord.txt", 'w+') #w+ maakt nieuw bestand aan als deze nog niet bestond
     nieuwbestand.write(antwoord)
 
-compressie()
+#compressie()
 
+#10 Fibonaci WERKT
+def fibonaci(n,ans):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    if len(ans) == n:
+        print('Antwoord = ',max(ans))
+        return(max(ans))
+    else:
+        ans.append(ans[len(ans)-1]+ans[len(ans)-2])
+
+
+    fibonaci(n,ans) #Recursief
+
+
+fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
 
 
 #11 Caesarcijfer WERKT
@@ -210,8 +227,8 @@ def caesar():
             index = klein.index(letter)
             nieuweindex = index + stap
             antwoord = antwoord + klein[nieuweindex]
-        elif letter == ' ':
-            antwoord = antwoord + ' '
+        else: #Voor spaties of leestekens
+            antwoord = antwoord + letter
     print('Caesarcode = {}'.format(antwoord))
 
 #caesar()
