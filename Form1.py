@@ -169,7 +169,7 @@ def random():
 
 #random()
 
-#8 Compressie
+#8 Compressie WEKRT
 
 def compressie():
     antwoord = ""
