@@ -101,7 +101,7 @@ def sorteren1(): #Dit is opzich een sorteer functie, maar dit is wel heel makkel
 
 #sorteren1()
 
-def sorteren():
+def sorteren(): #Bron
     lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
     leeg = []
 
@@ -171,6 +171,20 @@ def random():
 
 #8 Compressie
 
+def compressie():
+    antwoord = ""
+    bestand = open("compressie.txt" ,"r")
+    data = bestand.read().split('\n') #leest data uit bestand en split het meteen in zitten en lege zinnen
+    for zin in data:
+        strip = zin.lstrip() #De l voor strip staat voor 'leading' dat betekend dat alle whitespace voor de tekst word verwijderd
+        if strip != '': #Negeert de lege regels
+            antwoord = antwoord + strip + '\n'
+
+    nieuwbestand = open("compressieantwoord.txt", 'w+') #w+ maakt nieuw bestand aan als deze nog niet bestond
+    nieuwbestand.write(antwoord)
+
+compressie()
+
 
 
 #11 Caesarcijfer WERKT
@@ -205,7 +219,7 @@ def caesar():
 #12 FizzBuzz WERKT
 def fizzbuzz():
     for item in range(1,101):
-        if item%3 == 0 and item%5 ==0:
+        if item%3 == 0 and item%5 ==0: #Kijkt of er een rest is na de deling
             print('fizzbuzz')
         elif item%3 == 0:
             print('fizz')
