@@ -1,4 +1,4 @@
-"Ik heb sommige dingen samen gedaan met Max."
+"Ik heb de eerste 3 opdrachten samen gedaan met Max van Kemenade"
 
 #1 Pyramide WERKT
 def pyramide():
@@ -101,7 +101,7 @@ def sorteren1(): #Dit is opzich een sorteer functie, maar dit is wel heel makkel
 
 #sorteren1()
 
-def sorteren(): #Bron
+def sorteren():
     lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
     leeg = []
 
@@ -185,6 +185,39 @@ def compressie():
 
 #compressie()
 
+#9 Cyclisch verschuiven WERKT
+
+def verschuiven(ch,n):
+    ch = str(ch)
+    print("Begin = ", ch)
+    antwoord = ""
+    vervangen = ""
+    if n == 0:# n is gelijk aan 0, zelfde waarde returnt
+        print('Zelfde')
+        return(ch)
+    if n > 0:# n is groter dan 0, bitjes naar links
+        print(n,'naar links')
+        for item in ch[:n]:
+            vervangen = vervangen + item
+        for item in ch[n:]:
+            antwoord = antwoord + item
+        antwoord = antwoord + vervangen
+        return(antwoord)
+    if n < 0:# n is kleiner dan 0, bitjes naar rechts
+        print(n,'naar rechts')
+        for item in ch[n:]:
+            vervangen = vervangen + item
+        for item in ch[:n]:
+            antwoord = antwoord + item
+        antwoord = vervangen + antwoord
+        return(antwoord)
+
+ch= 1011000
+n = 3
+#print(verschuiven(ch,n))
+
+
+
 #10 Fibonaci WERKT
 def fibonaci(n,ans):
     if n == 0:
@@ -201,7 +234,7 @@ def fibonaci(n,ans):
     fibonaci(n,ans) #Recursief
 
 
-fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
+#fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
 
 
 #11 Caesarcijfer WERKT

@@ -1,26 +1,37 @@
-def fibonaci(n,ans):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    if len(ans) == n:
-        print('Antwoord = ',max(ans))
-        return(max(ans))
-    else:
-        ans.append(ans[len(ans)-1]+ans[len(ans)-2])
+def verschuiven(ch,n):
+    ch = str(ch)
+    print("Begin = ", ch)
+    antwoord = ""
+    vervangen = ""
+    if n == 0:# n is gelijk aan 0, zelfde waarde returnt
+        print('Zelfde')
+        return(ch)
+    if n > 0:# n is groter dan 0, bitjes naar links
+        print(n,'naar links')
+        for item in ch[:n]:
+            vervangen = vervangen + item
+        for item in ch[n:]:
+            antwoord = antwoord + item
+        antwoord = antwoord + vervangen
+        return(antwoord)
+    if n < 0:# n is kleiner dan 0, bitjes naar rechts
+        print(n,'naar rechts')
+        for item in ch[n:]:
+            vervangen = vervangen + item
+        for item in ch[:n]:
+            antwoord = antwoord + item
+        antwoord = vervangen + antwoord
+        return(antwoord)
 
 
-    fibonaci(n,ans) #Recursief
 
 
-fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
+ch= 1011000
+n = 3
+print(verschuiven(ch,n))
 
-
-"""def fibo(n):
-    if n == 0:
-        return 0
-    elif n ==1:
-        return 1
-    else:
-        return (fibo(n-1)+fibo(n-2))
-print(fibo(4))"""
+"""ch = str(ch)
+print(ch)
+ch = ch.replace("1","")
+print(ch)
+"""
