@@ -11,10 +11,7 @@ def pyramide():
 #pyramide()
 
 #2 Testcheck WERKT
-def testcheck():
-    string1 = input('Geef een string: ')
-    string2 = input('Geef een string: ')
-
+def testcheck(string1, string2):
     index = 0
 
     for item1 in string1:
@@ -26,19 +23,26 @@ def testcheck():
     index = index + 1
     print(index)
 
-#testcheck()
+#string1 = input('Geef een string: ')
+#string2 = input('Geef een string: ')
+#testcheck(string1, string2)
 
 #3 Lijstcheck
 
 #a WERKT
 def count(lst,nummer):
-    aantal = lst.count(nummer)
+    aantal = 0
+    for getal in lst:
+        if getal == nummer:
+            aantal = aantal + 1
+
+    print('getal: {} komt {} keer voor in de lijst'.format(nummer, aantal))
     return aantal
-    #print('getal: {} komt {} keer voor in de lijst'.format(nummer,aantal))
+
 """De uitvoering van de functie count staat hier onder, om te testen verwijder '#',
 Dit heb ik gedaan omdat de functie ook word gebruikt voor opdracht C can 3,
  daardoor is de print ook als opmerking geplaatst"""
-#count([4,3,6,3,5,7,5,4,3,2,7,2,9,5,3,2,1,2,4,5,7,3,4,6,3],3)
+count([4,3,6,3,5,7,5,4,3,2,7,2,9,5,3,2,1,2,4,5,7,3,4,6,3],3)
 
 #b WERKT
 def verschil():
