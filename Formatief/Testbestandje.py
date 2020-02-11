@@ -1,37 +1,15 @@
-def verschuiven(ch,n):
-    ch = str(ch)
-    print("Begin = ", ch)
-    antwoord = ""
-    vervangen = ""
-    if n == 0:# n is gelijk aan 0, zelfde waarde returnt
-        print('Zelfde')
-        return(ch)
-    if n > 0:# n is groter dan 0, bitjes naar links
-        print(n,'naar links')
-        for item in ch[:n]:
-            vervangen = vervangen + item
-        for item in ch[n:]:
-            antwoord = antwoord + item
-        antwoord = antwoord + vervangen
-        return(antwoord)
-    if n < 0:# n is kleiner dan 0, bitjes naar rechts
-        print(n,'naar rechts')
-        for item in ch[n:]:
-            vervangen = vervangen + item
-        for item in ch[:n]:
-            antwoord = antwoord + item
-        antwoord = vervangen + antwoord
-        return(antwoord)
+def sorteren():
+    lijst = [4, 3, 6, 3, 5, 7, 5, 4, 3, 2, 7, 2, 9, 5, 3, 2, 1, 2, 4, 5, 7, 3, 4, 6, 3]
+    leeg = []
+    leeg.append(lijst[0])
+    lijst.pop(0)
+
+    while len(lijst) > 0:
+        print()
 
 
 
+sorteren()
 
-ch= 1011000
-n = 3
-print(verschuiven(ch,n))
 
-"""ch = str(ch)
-print(ch)
-ch = ch.replace("1","")
-print(ch)
-"""
+# uitkomst [1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 9]
