@@ -42,7 +42,7 @@ def count(lst,nummer):
 """De uitvoering van de functie count staat hier onder, om te testen verwijder '#',
 Dit heb ik gedaan omdat de functie ook word gebruikt voor opdracht C can 3,
  daardoor is de print ook als opmerking geplaatst"""
-count([4,3,6,3,5,7,5,4,3,2,7,2,9,5,3,2,1,2,4,5,7,3,4,6,3],3)
+#count([4,3,6,3,5,7,5,4,3,2,7,2,9,5,3,2,1,2,4,5,7,3,4,6,3],3)
 
 #b WERKT
 def verschil():
@@ -238,7 +238,7 @@ def fibonaci(n,ans):
     fibonaci(n,ans) #Recursief
 
 
-#fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
+fibonaci(int(input("Geef een integer n: "))+1,[0,1,1]) #+1 want index begint bij 0
 
 
 #11 Caesarcijfer WERKT
