@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1a3706-d028-4a8e-b84e-7e3f1e6f4a87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Prijsvraag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Form1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Form1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Formatief/Form1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prijsvraag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Formatief/Prijsvraag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testbestandje.py" beforeDir="false" afterPath="$PROJECT_DIR$/Formatief/Testbestandje.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonusvraag_vier_kwadraten_student.py" beforeDir="false" afterPath="$PROJECT_DIR$/Formatief/bonusvraag_vier_kwadraten_student.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +69,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Form1.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jelle\Desktop\SP\SP1.1\Formatief\Form1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +91,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Prijsvraag.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jelle\Desktop\SP\SP1.1\Formatief\Prijsvraag.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +113,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testbestandje.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jelle\Desktop\SP\SP1.1\Formatief\Testbestandje.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +135,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bonusvraag_vier_kwadraten_student.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jelle\Desktop\SP\SP1.1\Formatief\bonusvraag_vier_kwadraten_student.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,7 +170,8 @@
       <workItem from="1580988482397" duration="9960000" />
       <workItem from="1581081394265" duration="3434000" />
       <workItem from="1581284084724" duration="2514000" />
-      <workItem from="1581335363317" duration="347000" />
+      <workItem from="1581335363317" duration="493000" />
+      <workItem from="1581420323796" duration="325000" />
     </task>
     <servers />
   </component>
